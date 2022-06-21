@@ -1,31 +1,31 @@
-from PyQt5.QtCore import Qt
+# напиши здесь код для второго экрана приложения
+from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-from variabels import *
-from project2 import *
-class MainWin(QWidget):
+
+class TestWin(QWidget):
     def __init__(self):
         super().__init__()
         self.set_appear()
         self.initUI()
         self.connects()
         self.show()
-    def set_appear(self):
-        self.setWindowTitle(txt_title)
+    def set_appear():
+        self.setWindowTitle(title_text)
         self.resize(win_w,win_h)
-    def initUI(self):
-        self.hello_text = QLabel(txt_hello)
-        self.instruction = QLabel(txt_instruction)
-        self.button = QPushButton(txt_next)
-        self.layout = QVBoxLayout()
-        self.layout.addWidget(self.hello_text)
-        self.layout.addWidget(self.instruction)
-        self.layout.addWidget(self.button)
-        self.setLayout(self.layout)
-    def connects(self):
-        self.button.clicked.connect(self.next_click)
-    def next_click(self):
-        self.hide()
-        self.tw = TestWin()
-app = QApplication([])
-mw = MainWin()  
-app.exec_()     
+        self.move(win_x,win_y)
+    def initUI():
+        self.tfio = QLabel(txt_tfio)
+        self.fio = QLineEdit(txt_fio)
+        self.tyo = QLabel(txt_tyo)
+        self.yo = QLineEdit(txt_yo)
+        self.instr1 = QLabel(txt_instr1)
+        self.but1 = QPushButton(txt_but1)
+        self.hearth1 = QLineEdit(txt_hearth1)
+        self.instr2 = QLabel(txt_instr2)
+        self.but2 = QPushButton(txt_but2)
+        self.instr3 = QLabel(txt_instr3)
+        self.but3 = QPushButton(txt_but3)
+        self.hearth11 = QLineEdit(txt_hearth11)
+        self.hearht12 = QlineEdit(txt_hearth12)
+        self.final_but = QPushButton(txt_final_but)
+        self.timer = QLabel(txt_timer)
