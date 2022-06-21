@@ -1,7 +1,8 @@
+# напиши здесь код основного приложения и первого экрана
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
-from variabels import *
-from project2 import *
+from instr import *
+from second_win import *
 class MainWin(QWidget):
     def __init__(self):
         super().__init__()
@@ -28,6 +29,4 @@ class MainWin(QWidget):
         self.tw = TestWin()
 app = QApplication([])
 mw = MainWin()  
-app.exec_()     
-
-
+app.exec_()    
