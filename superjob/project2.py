@@ -3,10 +3,10 @@ from PyQt5.QtWidgets import *
 from instr import *
 from final_win import *
 from PyQt5.QtGui import *
-class Result():
-   def __init__(self,fio ,yo,t1,t2,t3):
+class Xpshka():
+    def __init__(self,fio ,yo,t1,t2,t3):
         self.fio = fio
-        self.yo = yo
+        self.yo = int(yo)
         self.t1 = t1
         self.t2 = t2
         self.t3 = t3
@@ -66,8 +66,8 @@ class TestWin(QWidget):
 
 
     def next_click(self):
-        self.xp = Result(self.fio.text(),self.yo.text(),self.hearth1.text(),self.hearth11.text(),self.hearth12.text())
-        self.ew = EndWin(self.data)
+        self.xp = Xpshka(self.fio.text(),self.yo.text(),self.hearth1.text(),self.hearth11.text(),self.hearth12.text())
+        self.ew = EndWin(self.xp)
         self.hide()
         
     def timer1_save(self):
@@ -85,7 +85,7 @@ class TestWin(QWidget):
         time = time.addSecs(-1)
         self.timer_lab.setText(time.toString('hh:mm:ss'))
 
-        self.timer_lab.setStyleSheet('color: rgb(0,0,0)')
+        self.timer_lab.setStyleSheet('color: rgb(0,0,244)')
         if time.toString('hh:mm:ss') <= '00:00:00':
             self.timer.stop()
             self.state = 0
@@ -104,7 +104,7 @@ class TestWin(QWidget):
         time = time.addSecs(-1)
         self.timer_lab.setText(time.toString('hh:mm:ss'))
 
-        self.timer_lab.setStyleSheet('color: rgb(0,0,0)')
+        self.timer_lab.setStyleSheet('color: rgb(0,220,0)')
         if time.toString('hh:mm:ss') <= '00:00:00':
             self.timer.stop()
             self.state = 0
